@@ -40,9 +40,9 @@ const teamMembers = [
 // Prendo il contenitore della card
 const cardContainer = document.getElementById("card-container");
 
-// Creo la card
+// Definisco la card
 let card;
-function createMemberCard(name, role, email, img) {
+function defineMemberCard(name, role, email, img) {
     return `<div class="col p-4">
               <div class="card d-flex flex-row">
                   <img
@@ -59,14 +59,31 @@ function createMemberCard(name, role, email, img) {
           </div>`;
 }
 
+// Creo la card
+function addMemberCard(name, role, email, img) {
+    cardContainer.innerHTML += defineMemberCard(name, role, email, img);
+}
+
 // Mostro la card
 teamMembers.forEach((membro) => {
-    cardContainer.innerHTML += createMemberCard(
-        membro.name,
-        membro.role,
-        membro.email,
-        membro.img
-    );
+    addMemberCard(membro.name, membro.role, membro.email, membro.img);
 });
 
 // Form - Nuovo Membro
+const formNewMember = document.getElementById("form-new-member");
+const inputName = document.getElementById("input-name");
+const inputRole = document.getElementById("input-role");
+const inputEmail = document.getElementById("input-email");
+
+// Invio form
+formNewMember.addEventListener("submit", (e) => {
+    // Prevengo l'invio dei dati ed il reload della pagina
+    e.preventDefault();
+
+    addMemberCard(
+        inputName.value,
+        inputRole.value,
+        inputEmail.value,
+        "img/female3.png"
+    );
+});
