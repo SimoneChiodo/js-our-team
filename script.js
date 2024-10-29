@@ -50,8 +50,8 @@ function createMemberCard(name, role, email, img) {
                       class="img-fluid rounded-start"
                       alt="member-photo"
                   />
-                  <div class="card-body">
-                      <h5 class="card-title">${name}</h5>
+                  <div class="card-body text-light bg-darkblue rounded-end">
+                      <h5 class="card-title">${name.toUpperCase()}</h5>
                       <p class="card-text">${role}</p>
                       <a href="#" class="">${email}</a>
                   </div>
