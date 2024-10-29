@@ -68,3 +68,5 @@ teamMembers.forEach((membro) => {
         membro.img
     );
 });
+
+// Form - Nuovo Membro

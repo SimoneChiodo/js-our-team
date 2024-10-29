@@ -27,9 +27,12 @@
     <body>
         <!-- Header -->
         <header class="p-5">
+            <!-- Titolo e testo -->
             <div class="text-center">
+                <!-- Title -->
                 <h1 class="pb-5 text-pink">Meet out Team</h1>
 
+                <!-- Text -->
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Iure perferendis inventore corporis distinctio. Beatae
@@ -41,11 +44,53 @@
                     corporis dolor, id animi voluptates optio.
                 </p>
             </div>
+
+            <!-- Form Nuovo-Membro -->
+            <form
+                class="row p-3 pb-4 mt-4 row-gap-3 text-center justify-content-center"
+            >
+                <!-- Titolo -->
+                <h2 class="col-12">Vuoi inserire un nuovo membro?</h2>
+
+                <!-- Input Nome -->
+                <div class="col-3">
+                    <!-- Input - Nome -->
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="input-name"
+                        placeholder="Nome e Cognome"
+                        required
+                    />
+                </div>
+
+                <!-- Input Roulo -->
+                <div class="col-3">
+                    <!-- Input - Ruolo -->
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="input-role"
+                        placeholder="Ruolo"
+                        required
+                    />
+                </div>
+
+                <!-- Riga Vuota -->
+                <div class="col-12"></div>
+
+                <!-- Submit -->
+                <div class="col">
+                    <button type="submit" class="btn btn-primary px-4">
+                        Inserisci
+                    </button>
+                </div>
+            </form>
         </header>
 
         <!-- Main -->
         <main class="px-5">
-            <!-- row-cols-lg-2 row-cols-sm-1 -->
+            <!-- Member Container -->
             <div
                 class="row row-cols-xxl-3 row-cols-lg-2 row-cols-1"
                 id="card-container"
