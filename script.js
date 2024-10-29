@@ -43,8 +43,8 @@ const cardContainer = document.getElementById("card-container");
 // Creo la card
 let card;
 function createMemberCard(name, role, email, img) {
-    return `<div class="col">
-              <div class="card d-flex flex-row" style="width: 36rem">
+    return `<div class="col p-4">
+              <div class="card d-flex flex-row">
                   <img
                       src="./${img}"
                       class="img-fluid rounded-start"
